@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body onload="Dados()">
+    <header>
+        <div class="logo-content">
+            <img src="/assets/logo.png" alt="" class="logo">
+        </div>
+    </header>
+
+    <div class="lines">
+        <img src="/assets/lines_top.png" alt="" class="lines-top">
+        <img src="/assets/lines_bottom.png" alt="" class="lines_bottom">
+    </div>
+
+    <div class="container mt-5">
+        <div class="col col-infos ">
+            <h1 class="name-table mt-4"></h1>
+
+            <div class="btn-group mt-5">
+                <a href="#" class="btn" aria-current="page" onclick="Campos()" id="btn1">Campos</a>
+                <a href="#" class="btn" onclick="relacionamentos()" id="btn2">Relacionamento</a>
+                <a href="#" class="btn" onclick="indices()" id="btn3">Indices</a>
+            </div>
+
+            <div class="content-details mt-5">
+                <h2 class="title">Detalhes</h2>
+                <p class="text mt-3" id="rotina"></p>
+                <p class="text" id="chave"></p>
+            </div>
+
+            <div class="content-pages mt-5">
+                <h2 class="title-page"></h2>
+
+                <table class="table table-dark table-striped mt-4 w-100">
+                    <thead id="thead"></thead>
+                    <tbody id="bdtabela"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">A2_FILIAL</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Campo: </span> 03</p>
+                    <p><span class="fw-bolder">Tipo: </span> 03</p>
+                    <p><span class="fw-bolder">Tamanho: </span> 03</p>
+                    <p><span class="fw-bolder">Titulo: </span> 03</p>
+                    <p><span class="fw-bolder">Descrição: </span> 03</p>
+                    <p><span class="fw-bolder">Validação: </span> 03</p>
+                    <p><span class="fw-bolder">Relação: </span> 03</p>
+                    <p><span class="fw-bolder">F3: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                    <p><span class="fw-bolder">Ordem: </span> 03</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
