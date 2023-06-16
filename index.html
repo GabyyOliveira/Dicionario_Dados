@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="/assets/styles.css">
 </head>
 
-<body onload="Dados()" class="bd">
+<body class="bd">
     <header>
         <div class="logo-content">
             <img src="/assets/logo.png" alt="" class="logo">
         </div>
+        <div class="theme-toggler">
+            <i class="bi bi-sun-fill ms-1"></i>
+            <i class="bi bi-moon-stars-fill ms-2"></i>
+        </div>
     </header>
-    <div class="theme-toggler">
-        <i class="bi bi-sun-fill ms-1"></i>
-        <i class="bi bi-moon-stars-fill ms-2"></i>
-    </div>
+    
     <div class="lines">
         <img src="/assets/lines_top.png" alt="" class="lines-top">
         <img src="/assets/lines_bottom.png" alt="" class="lines_bottom">
@@ -42,8 +43,8 @@
 
             <div class="content-details mt-5">
                 <h2 class="title">Detalhes</h2>
-                <p class="text mt-3" id="rotina"></p>
-                <p class="text" id="chave"></p>
+                <p class="text mt-3 fw-bolder" id="rotina">Rotina: <span class="fw-normal">MATA020</span> </p>
+                <p class="text fw-bolder" id="chave">Chave Única: <span class="fw-normal">A2_COD+FILIAL</span></p>
             </div>
 
             <div class="content-pages content-campos mt-5">
@@ -60,7 +61,16 @@
                                 <th scope="col">Tamanho</th>
                             </tr>
                         </thead>
-                        <tbody id="bdCampos"></tbody>
+                        <tbody id="bdCampos">
+                            <tr>
+                                <th scope="row" class="link" onclick="modal(this)" id="1">A2_COD</th>
+                                <td>Codigo</td>
+                                <td>Codigo do fornecedor</td>
+                                <td align="center">C</td>
+                                <td align="center">Real</td>
+                                <td align="center">6</td>
+                              </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -78,7 +88,15 @@
                                 <th scope="col">Relacionamento</th>
                             </tr>
                         </thead>
-                        <tbody id="bdRel"></tbody>
+                        <tbody id="bdRel">
+                            <tr>
+                                <th>${item.dominio}</th>
+                                <td>${item.cdominio}</td>
+                                <td>${item.expdom}</td>
+                                <td>${item.expcdom}</td>
+                                <td>${item.relac}</td>
+                              </tr>
+                        </tbody>
                     </table>
                 </div>
 
@@ -96,7 +114,14 @@
                                 <th scope="col">Nickname</th>
                             </tr>
                         </thead>
-                        <tbody id="bdIndices"></tbody>
+                        <tbody id="bdIndices">
+                            <tr>
+                                <th>${item.ordem}</th>
+                                <td>${item.chave}</td>
+                                <td>${item.descricao}</td>
+                                <td>${item.nickname}</td>
+                              </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -141,7 +166,7 @@
 
         var json = JSON.parse(dicionario)
     </script>
-    
+
     <script src="/assets/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

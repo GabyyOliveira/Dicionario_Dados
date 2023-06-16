@@ -1,83 +1,83 @@
 
-function Dados() {
+// function Dados() {
 
-    let name = document.querySelector('.name-table')
-    let rotina = document.querySelector('#rotina')
-    let chave = document.querySelector('#chave')
+//     let name = document.querySelector('.name-table')
+//     let rotina = document.querySelector('#rotina')
+//     let chave = document.querySelector('#chave')
 
-    name.innerText = json.nome
-    rotina.innerHTML = `<span class="fw-bolder">Rotina: </span> ` + json.sysobj
-    chave.innerHTML  = `<span class="fw-bolder">Chave Única: </span> ` + json.unico
+//     name.innerText = json.nome
+//     rotina.innerHTML = `<span class="fw-bolder">Rotina: </span> ` + json.sysobj
+//     chave.innerHTML  = `<span class="fw-bolder">Chave Única: </span> ` + json.unico
 
-    Campos()
-    relacionamentos()
-    indices()
-}
+//     Campos()
+//     relacionamentos()
+//     indices()
+// }
 
-function Campos() {
-    let bodyTable = document.querySelector('#bdCampos')
+// function Campos() {
+//     let bodyTable = document.querySelector('#bdCampos')
 
-    bodyTable.innerHTML = ''
+//     bodyTable.innerHTML = ''
     
-    let campos = json.campos
+//     let campos = json.campos
 
-    campos.map((item, nI) => {
+//     campos.map((item, nI) => {
 
-        bodyTable.innerHTML += `
-                <tr class="teste">
-                  <th scope="row" class="link" onclick="modal(this)" id="${nI}">${item.campo}</th>
-                  <td>${item.titulo}</td>
-                  <td>${item.descricao}</td>
-                  <td align="center">${item.tipo}</td>
-                  <td align="center">${item.contexto}</td>
-                  <td align="center">${item.tamanho}</td>
-                </tr>
-            `
-    })
+//         bodyTable.innerHTML += `
+//                 <tr class="teste">
+//                   <th scope="row" class="link" onclick="modal(this)" id="${nI}">${item.campo}</th>
+//                   <td>${item.titulo}</td>
+//                   <td>${item.descricao}</td>
+//                   <td align="center">${item.tipo}</td>
+//                   <td align="center">${item.contexto}</td>
+//                   <td align="center">${item.tamanho}</td>
+//                 </tr>
+//             `
+//     })
 
-}
+// }
 
-function relacionamentos() {
-    let bodyTable = document.querySelector('#bdRel')
+// function relacionamentos() {
+//     let bodyTable = document.querySelector('#bdRel')
 
-    bodyTable.innerHTML = ''
+//     bodyTable.innerHTML = ''
 
-    let campos = json.relacionamentos
+//     let campos = json.relacionamentos
 
-    campos.map((item, nI) => {
-        bodyTable.innerHTML += `
-                <tr>
-                  <th>${item.dominio}</th>
-                  <td>${item.cdominio}</td>
-                  <td>${item.expdom}</td>
-                  <td>${item.expcdom}</td>
-                  <td>${item.relac}</td>
-                </tr>
-            `
-    })
+//     campos.map((item, nI) => {
+//         bodyTable.innerHTML += `
+//                 <tr>
+//                   <th>${item.dominio}</th>
+//                   <td>${item.cdominio}</td>
+//                   <td>${item.expdom}</td>
+//                   <td>${item.expcdom}</td>
+//                   <td>${item.relac}</td>
+//                 </tr>
+//             `
+//     })
 
     
-}
+// }
 
-function indices() {
-    let bodyTable = document.querySelector('#bdIndices')
+// function indices() {
+//     let bodyTable = document.querySelector('#bdIndices')
 
-    bodyTable.innerHTML = ''
+//     bodyTable.innerHTML = ''
 
-    let campos = json.indices
+//     let campos = json.indices
 
-    campos.map((item, nI) => {
-        bodyTable.innerHTML += `
-                <tr>
-                  <th>${item.ordem}</th>
-                  <td>${item.chave}</td>
-                  <td>${item.descricao}</td>
-                  <td>${item.nickname}</td>
-                </tr>
-            `
-    })
+//     campos.map((item, nI) => {
+//         bodyTable.innerHTML += `
+//                 <tr>
+//                   <th>${item.ordem}</th>
+//                   <td>${item.chave}</td>
+//                   <td>${item.descricao}</td>
+//                   <td>${item.nickname}</td>
+//                 </tr>
+//             `
+//     })
 
-}
+// }
 
 function modal(el){
     let modal = document.querySelector('.modal')
